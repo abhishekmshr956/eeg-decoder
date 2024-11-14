@@ -1,0 +1,36 @@
+
+# Example:
+# hierarchical_model:
+#   model: model1
+#   fold: n
+#   out:
+#     0:
+#       model: model2
+#       fold: n
+#       out:
+#         0:0 
+#         1:1
+#     1:
+#       model: model3
+#       fold: n
+#       out:
+#         0:2
+#         1:3
+
+hierarchical_model:
+  path: eridanus_disrespects_EEGNet_2023-08-15_A2_CL_2_2023-08-15_A2_OL_1
+  fold: 4 # [Right Arm+Left Arm | Subtract+Legs] 89.92 82.83
+  out:
+    0: 
+      path: adidas_onion_EEGNet_2023-08-15_A2_CL_2_2023-08-15_A2_OL_1
+      fold: 2 # [Left Arm | Right Arm] 95.63 90.32
+      out:
+        0: 0
+        1: 1
+    1: 
+      path: overawing_golfers_EEGNet_2023-08-15_A2_CL_2_2023-08-15_A2_OL_1
+      fold: 0 # [Left Arm | Right Arm] 95.63 90.32
+      out:
+        0: 2
+        1: 3
+    
